@@ -1,0 +1,24 @@
+h1 Firebase Authentication Module
+p Remember to include
+  code 'auth'
+  | as a dependency and include the factory 
+  code 'Auth'
+  | into the scope. Also, change the firebase url to your own.
+
+span(ng-show="user.auth") 
+  | Hello {{user.name}} {{user.displayName}} | {{user.uid}} 
+  a(ng-click="auth.unauth()") Logout
+
+button.btn.btn-success(ng-click="auth.popup()") log in
+
+
+p Once the user is authenticated, the information below will be provided:
+pre {{user}}
+
+
+h3 TODO
+ul
+  li nav should update menu if user logged in
+  li SMS auth
+  li fix 'e' error
+  

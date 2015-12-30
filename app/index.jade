@@ -1,0 +1,36 @@
+doctype html
+html(lang="en")
+
+  head
+    meta(charset="utf-8")
+    meta(name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width")
+    title auth chesby module
+    //link(media="lazy", id="app-css", href="lib.css" rel="stylesheet")
+    link(media="lazy", id="app-css", href="app.css" rel="stylesheet")
+    
+  body(ng-app="angular")
+    div(ng-if="false", class="container")
+      h1 Loading the application, please hold on
+      div.sk-spinner.sk-spinner-wave
+        div.sk-rect1
+        div.sk-rect2
+        div.sk-rect3
+        div.sk-rect4
+        div.sk-rect5
+    div(ng-include="'nav.html'")
+    div(class="container" ng-view="")
+    
+    link(data-require="bootstrap-css@3.2.0" data-semver="3.2.0" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+    script(defer src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.14/angular.min.js")
+    script(defer src="http://code.angularjs.org/1.2.14/angular-route.min.js")
+    //script(defer src="http://code.angularjs.org/1.2.23/angular-cookies.min.js")
+    script(defer src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.11.0.min.js")
+    script(defer src="//cdn.firebase.com/js/client/2.0.4/firebase.js")
+    script(defer src="//cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js")
+    script(defer data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js")
+    <link defer id="app-css" media="lazy" rel="stylesheet" href="//mgcrea.github.io/angular-strap/styles/libraries.min.css">
+    script(defer, src="lib.min.js")
+    script(defer, src="templates.min.js")
+    script(defer, src="app.min.js")
+    script(defer).
+      document.getElementById('app-css').media = 'screen';
